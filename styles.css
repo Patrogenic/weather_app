@@ -1,0 +1,293 @@
+body, html{
+ margin: 0;
+ font-family: sans-serif;
+ color: white;
+ background-attachment: fixed;
+ background-image: linear-gradient(rgb(0, 84, 153), rgb(0, 179, 170));
+ height: 100%;
+}
+
+#page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+#header{
+    text-align: center;
+    /* background-color: rgb(44, 190, 209); */
+    font-size: 20pt;
+    padding: 20px 0;
+    border-bottom:rgb(204, 204, 204) 1px solid;
+    margin-bottom: 15px;
+}
+#main-content{
+    flex: 1;
+}
+#form{
+    /* background-color: #acacac; */
+    text-align: center;
+    margin-top: 20px;
+}
+#weatherInput{
+    width: 100px;
+}
+#weatherSubmit{
+    background-color: white;
+    border: none;
+    height: 20px;
+}
+
+#wrap-temp-sky-img{
+
+}
+#city{
+    /* border-top:rgb(204, 204, 204) 1px solid; */
+    /* padding-top: 10px; */
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20pt;
+    /* margin-top: 20px */
+    /* font-weight: bold; */
+}
+#sky-condition-container{
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+#sky-condition{
+    text-align: center;
+    margin-top: 5px;
+}
+#sky-condition-img{
+    /* display: inline-block; */
+    /* text-align: center; */
+    margin-top: -10px;
+}
+#temp{
+    text-align: center;
+    font-size: 60pt;
+    /* font-weight: lighter; */
+    margin-left: 25px;
+    /* margin-top: 10px; */
+    margin-bottom: 30px;
+}
+#forecastResults{
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.forecast-day-container{
+    border: black 1px solid;
+    overflow: hidden;
+
+    visibility: hidden;
+    height: 0;
+    /* animation-name: expand-day; */
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+.forecast-day-parent{
+    
+}
+.forecast-entry-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 35px;
+}
+.forecast-time{
+    width: 180px;
+    margin-left: 10px;
+}
+.forecast-temp{
+    width: 180px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#other-info{
+    margin: 0 20px;
+}
+.bottom-info{
+    border-bottom: 1px solid white;
+    line-height: 2;
+}
+
+footer{
+    line-height: 2;
+    text-align: center;
+    background-color:rgb(0, 179, 170);
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+/* unfortunate solution to dynamic animations... I'm still looking into this */
+@keyframes expand-day8{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 280px;
+    }
+}
+
+@keyframes collapse-day8{
+    from{
+        visibility: visible;
+        height: 280px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+@keyframes expand-day7{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 245px;
+    }
+}
+
+@keyframes collapse-day7{
+    from{
+        visibility: visible;
+        height: 245px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day6{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 210px;
+    }
+}
+@keyframes collapse-day6{
+    from{
+        visibility: visible;
+        height: 210px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day5{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 175px;
+    }
+}
+@keyframes collapse-day5{
+    from{
+        visibility: visible;
+        height: 175px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day4{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 140px;
+    }
+}
+@keyframes collapse-day4{
+    from{
+        visibility: visible;
+        height: 140px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day3{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 105px;
+    }
+}
+@keyframes collapse-day3{
+    from{
+        visibility: visible;
+        height: 105px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day2{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 70px;
+    }
+}
+@keyframes collapse-day2{
+    from{
+        visibility: visible;
+        height: 70px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@keyframes expand-day1{
+    from{
+        visibility: hidden;
+        height: 0;
+    }
+    to{
+        visibility: visible;
+        height: 35px;
+    }
+}
+@keyframes collapse-day1{
+    from{
+        visibility: visible;
+        height: 35px;
+    }
+    to{
+        visibility: hidden;
+        height: 0;
+    }
+}
